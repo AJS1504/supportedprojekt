@@ -100,7 +100,38 @@ class LanguageManager {
             }
         });
         
+        // Update legal document links
+        this.updateLegalLinks();
+        
         this.updateLanguageButtons();
+    }
+    
+    updateLegalLinks() {
+        const legalLinks = document.querySelectorAll('.footer-legal a');
+        legalLinks.forEach(link => {
+            const originalHref = link.getAttribute('href');
+            if (originalHref) {
+                if (this.currentLang === 'en') {
+                    // Switch to English versions
+                    if (originalHref.includes('impressum.html')) {
+                        link.href = 'impressum-en.html';
+                    } else if (originalHref.includes('datenschutz.html')) {
+                        link.href = 'datenschutz-en.html';
+                    } else if (originalHref.includes('agb.html')) {
+                        link.href = 'agb-en.html';
+                    }
+                } else {
+                    // Switch back to German versions
+                    if (originalHref.includes('impressum-en.html')) {
+                        link.href = 'impressum.html';
+                    } else if (originalHref.includes('datenschutz-en.html')) {
+                        link.href = 'datenschutz.html';
+                    } else if (originalHref.includes('agb-en.html')) {
+                        link.href = 'agb.html';
+                    }
+                }
+            }
+        });
     }
     
     updateLanguageButtons() {
