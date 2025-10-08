@@ -626,7 +626,7 @@ a {
 /* ===== PROJECTS SECTION ===== */
 .projects {
     padding: 80px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
     color: white;
 }
 
@@ -1384,6 +1384,14 @@ a {
         right: 20px;
     }
     
+    .navbar {
+        padding: 25px 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 20px 0;
+    }
+    
     .hero-title {
         font-size: 2.2rem;
     }
@@ -1398,7 +1406,7 @@ a {
     }
     
     .hero {
-        padding-top: 120px;
+        padding-top: 140px;
     }
     
     .hero-content {

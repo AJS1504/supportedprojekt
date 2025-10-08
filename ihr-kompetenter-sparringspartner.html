@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="de" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SupportedProject - Technische Projektdienstleistungen & Interimsmanagement</title>
+    <meta name="description" content="Technische Projektdienstleistungen & Interimsmanagement für KMU und Industrieunternehmen. Schnelle Startfähigkeit, messbare Ergebnisse. Jetzt kostenloses Erstgespräch buchen!">
+    <meta name="keywords" content="Projektmanagement, Interimsmanagement, technische Beratung, PMO, Engineering, Freelancer, Projektdienstleistungen">
+    <meta name="author" content="Andrej Sartison - SupportedProject">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://supportedproject.de/">
+    <meta property="og:title" content="SupportedProject - Technische Projektdienstleistungen">
+    <meta property="og:description" content="Professionelle technische Projektdienstleistungen und Interimsmanagement für KMU und Industrieunternehmen.">
+    <meta property="og:image" content="images/logo-new.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://supportedproject.de/">
+    <meta property="twitter:title" content="SupportedProject - Technische Projektdienstleistungen">
+    <meta property="twitter:description" content="Professionelle technische Projektdienstleistungen und Interimsmanagement für KMU und Industrieunternehmen.">
+    <meta property="twitter:image" content="images/logo-new.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo-new.png">
+    <link rel="apple-touch-icon" href="images/logo-new.png">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="lang-de" class="lang-btn active" aria-label="Deutsch">DE</button>
+        <button id="lang-en" class="lang-btn" aria-label="English">EN</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="SupportedProject Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link" data-de="Home" data-en="Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link" data-de="Leistungen" data-en="Services">Leistungen</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-de="Über mich" data-en="About">Über mich</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-de="Projektpakete" data-en="Project Packages">Projektpakete</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#why-choose" class="nav-link" data-de="Vorteile" data-en="Advantages">Vorteile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-de="Kontakt" data-en="Contact">Kontakt</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="parallax-layer logo-layer" data-speed="0.5">
+                <img src="images/logo-new.png" alt="SupportedProject - Technische Projektdienstleistungen und Interimsmanagement Logo mit geometrischem Design" class="bg-image logo-bg">
+            </div>
+            <div class="parallax-layer bridge-layer" data-speed="0.3">
+                <img src="images/bridge.jpg" alt="Moderne Industriebrücke als Symbol für technische Verbindungen und Projektmanagement" class="bg-image bridge-bg">
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">
+                    <span data-de="Technische Projektdienstleistungen" data-en="Technical Project Services">Technische Projektdienstleistungen</span>
+                    <span class="highlight" data-de="& Interimsmanagement" data-en="& Interim Management">& Interimsmanagement</span>
+                </h1>
+                <p class="hero-subtitle" data-de="Professionelle Unterstützung bei technischen Projekten, Qualitätssicherung und Prozessoptimierung - auch in kritischen Situationen und bei Engpässen. Schnell, strukturiert, messbar." data-en="Professional support for technical projects, turnaround situations, and capacity gaps. Fast, structured, measurable.">
+                    Professionelle Unterstützung bei technischen Projekten, Qualitätssicherung und Prozessoptimierung - auch in kritischen Situationen und bei Engpässen. Schnell, strukturiert, messbar.
+                </p>
+                
+
+                
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-lg" data-booking-trigger data-de="Jetzt Termin buchen" data-en="Book Appointment Now">
+                        <i class="fas fa-calendar-plus"></i>
+                        Jetzt Termin buchen
+                    </button>
+                    <a href="#services" class="btn btn-secondary" data-de="Mehr erfahren" data-en="Learn More">
+                        <i class="fas fa-info-circle"></i>
+                        Mehr erfahren
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-de="Leistungsspektrum" data-en="Service Portfolio">Leistungsspektrum</h2>
+                <p data-de="Unterstützung über alle Projektphasen hinweg" data-en="Support throughout all project phases">Unterstützung über alle Projektphasen hinweg<br><span data-de="von der ersten Idee bis zur erfolgreichen Umsetzung" data-en="from initial idea to successful implementation">von der ersten Idee bis zur erfolgreichen Umsetzung</span></p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 data-de="Verifikation & Validierung" data-en="Verification & Validation">Verifikation & Validierung</h3>
+                    <p data-de="Systematische Prüfung und Bewertung technischer Systeme, Prozesse und Dokumentationen – für Qualität sowie Norm- und Regelkonformität." data-en="Systematic testing and evaluation of technical systems, processes and documentation for quality and compliance.">
+                        Systematische Prüfung und Bewertung technischer Systeme, Prozesse und Dokumentationen für Qualität und Compliance.
+                    </p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 data-de="Projektmanagement (PMO)" data-en="Project Management Office (PMO)">Projektmanagement (PMO)</h3>
+                    <p data-de="Projektstart, Krisenbewältigung und Notfallmanagement mit strukturierter Projektsteuerung und klaren Meilensteinen." data-en="Kickstart, turnaround, and firefighting situations with structured project management and clear milestones.">
+                        Projektstart, Krisenbewältigung und Notfallmanagement mit strukturierter Projektsteuerung und klaren Meilensteinen.
+                    </p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-de="Interimsmanagement" data-en="Interim Management">Interimsmanagement</h3>
+                    <p data-de="Überbrückung von Kapazitätslücken in kritischen Projektphasen und bei Auftragsspitzen." data-en="Bridging capacity gaps in critical project phases and during peak workload periods.">
+                        Überbrückung von Kapazitätslücken in kritischen Projektphasen und bei Auftragsspitzen.
+                    </p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 data-de="Lieferantenkoordination" data-en="Supplier Coordination">Lieferantenkoordination</h3>
+                    <p data-de="Qualitätssicherung, Lieferanten-Onboarding und Schnittstellenkoordination für reibungslose Projektabläufe." data-en="Quality assurance, supplier onboarding, and interface coordination for smooth project workflows.">
+                        Qualitätssicherung, Lieferanten-Onboarding und Schnittstellenkoordination für reibungslose Projektabläufe.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-de="F&E-Begleitung & Zertifizierungsberatung" data-en="R&D Support & Certification Consulting">F&E-Begleitung & Zertifizierungsberatung</h3>
+                    <p data-de="Begleitung technischer Entwicklungsprojekte von der Konzeption bis zur Serienfreigabe mit Zertifizierungsvorbereitung." data-en="Technical development project support from concept to series approval with certification preparation.">
+                        Begleitung technischer Entwicklungsprojekte von der Konzeption bis zur Serienfreigabe mit Zertifizierungsvorbereitung.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-de="Schutzrechte & Dokumentation" data-en="Intellectual Property & Documentation">Schutzrechte & Dokumentation</h3>
+                    <p data-de="Technische Aufbereitung von Erfindungen für Patent- und Gebrauchsmusteranmeldungen mit Einreichungskoordination." data-en="Technical preparation of inventions for patent and utility model applications with filing coordination.">
+                        Technische Aufbereitung von Erfindungen für Patent- und Gebrauchsmusteranmeldungen mit Einreichungskoordination.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3 data-de="Fördermittel- & Projektantragsberatung" data-en="Funding & Project Application Consulting">Fördermittel- & Projektantragsberatung</h3>
+                    <p data-de="Technische Ausarbeitung und Berichtswesen für Förderprojekte mit Kalkulationen und Nachweisführung." data-en="Technical development and reporting for funding projects with calculations and documentation.">
+                        Technische Ausarbeitung und Berichtswesen für Förderprojekte mit Kalkulationen und Nachweisführung.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-de="Ihre Idee. Mein Antrieb." data-en="Your Idea. My Drive.">Ihre Idee. Mein Antrieb.</h3>
+                    <p data-de="Manchmal reicht ein Gespräch, um aus einer vagen Idee ein umsetzbares Projekt zu machen. Ich bin offen für neue Aufgaben – sprechen Sie mich einfach an." data-en="Sometimes a conversation is enough to turn a vague idea into a feasible project. I'm open to new challenges – just get in touch.">
+                        Manchmal reicht ein Gespräch, um aus einer vagen Idee ein umsetzbares Projekt zu machen. Ich bin offen für neue Aufgaben – sprechen Sie mich einfach an.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Rechtlicher Hinweis -->
+            <div class="legal-notice">
+                <div class="notice-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="notice-content">
+                    <h4 data-de="Rechtlicher Hinweis" data-en="Legal Notice">Rechtlicher Hinweis</h4>
+                    <p data-de="Alle Leistungen erfolgen ausschließlich beratend und begleitend. Prüfungen, Zertifizierungen, rechtliche Bewertungen oder Patentanmeldungen werden von den jeweils zuständigen Laboren, Prüfstellen oder Partnern durchgeführt." data-en="All services are provided exclusively in an advisory and supporting capacity. Tests, certifications, legal assessments or patent applications are carried out by the respective competent laboratories, testing facilities or partners.">
+                        Alle Leistungen erfolgen ausschließlich beratend und begleitend. Prüfungen, Zertifizierungen, rechtliche Bewertungen oder Patentanmeldungen werden von den jeweils zuständigen Laboren, Prüfstellen oder Partnern durchgeführt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-de="Andrej Sartison" data-en="Andrej Sartison">Andrej Sartison</h2>
+                <p data-de="SupportedProject Inhaber" data-en="SupportedProject Owner">SupportedProject Inhaber<br><span data-de="Technische Projektdienstleistungen & Interimsmanagement" data-en="Technical Project Services & Interim Management">Technische Projektdienstleistungen & Interimsmanagement</span></p>
+            </div>
+            
+            <!-- Portrait Image in Landscape -->
+            <div class="about-portrait">
+                <img src="images/andrej-portrait.jpg" alt="Andrej Sartison - SupportedProject" class="landscape-portrait">
+            </div>
+            
+            <!-- Expertise Grid -->
+            <div class="expertise-grid">
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="expertise-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-de="Doppelkompetenz" data-en="Dual Expertise">Doppelkompetenz</h3>
+                    <p data-de="Technische Ausbildung + Technischer Betriebswirt" data-en="Technical Education + Technical Business Administration">Technische Ausbildung + Technischer Betriebswirt</p>
+                </div>
+                
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="expertise-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 data-de="Mehrjährige Erfahrung" data-en="Multi-Year Experience">Mehrjährige Erfahrung</h3>
+                    <p data-de="Industrie- & Projekterfahrung mit technischer Tiefe" data-en="Industry & project experience with technical depth">Industrie- & Projekterfahrung mit technischer Tiefe</p>
+                </div>
+                
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="expertise-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-de="Strukturierte Arbeitsweise" data-en="Structured Approach">Strukturierte Arbeitsweise</h3>
+                    <p data-de="Klare Kommunikation & pragmatische Umsetzung" data-en="Clear communication & pragmatic implementation">Klare Kommunikation & pragmatische Umsetzung</p>
+                </div>
+            </div>
+            
+            <!-- Core Competencies -->
+            <div class="core-competencies">
+                <h3 data-de="Kernkompetenzen" data-en="Core Competencies">Kernkompetenzen</h3>
+                <div class="competencies-grid">
+                    <div class="competency-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-chart-line"></i>
+                        <span data-de="Strukturierte Analyse und zuverlässige Projektsteuerung" data-en="Structured analysis and reliable project management">Strukturierte Analyse und zuverlässige Projektsteuerung</span>
+                    </div>
+                    <div class="competency-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-users"></i>
+                        <span data-de="Klare Kommunikation mit allen Projektbeteiligten" data-en="Clear communication with all stakeholders">Klare Kommunikation mit allen Projektbeteiligten</span>
+                    </div>
+                    <div class="competency-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-rocket"></i>
+                        <span data-de="Schnelle Einarbeitung und pragmatische Umsetzung" data-en="Quick familiarization and pragmatic implementation">Schnelle Einarbeitung und pragmatische Umsetzung</span>
+                    </div>
+                    <div class="competency-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-calculator"></i>
+                        <span data-de="Budget- und Kostenverantwortung" data-en="Budget and cost responsibility">Budget- und Kostenverantwortung</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Packages Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-de="Projektpakete" data-en="Project Packages">Projektpakete</h2>
+                <p data-de="Planbare Abrechnung durch strukturierte Projektpakete" data-en="Predictable billing through structured project packages">Planbare Abrechnung durch strukturierte Projektpakete</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="package-header">
+                        <h3 data-de="Kickstart-Paket" data-en="Kickstart Package">Kickstart-Paket</h3>
+                        <div class="package-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="package-content">
+                        <ul>
+                            <li data-de="Projektanalyse und Zieldefinition" data-en="Project analysis and goal definition">Projektanalyse und Zieldefinition</li>
+                            <li data-de="Leistungsbeschreibung mit Meilensteinen erstellen" data-en="SOW creation with milestones">Leistungsbeschreibung mit Meilensteinen erstellen</li>
+                            <li data-de="Lieferantenbriefing" data-en="Supplier briefing">Lieferantenbriefing</li>
+                            <li data-de="Projektplan und Timeline" data-en="Project plan and timeline">Projektplan und Timeline</li>
+                        </ul>
+                        <div class="package-duration" data-de="Typische Dauer: 2-4 Wochen" data-en="Typical duration: 2-4 weeks">Typische Dauer: 2-4 Wochen</div>
+                    </div>
+                </div>
+                
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="package-header">
+                        <h3 data-de="Audit & Bewertung" data-en="Audit & Assessment">Audit & Bewertung</h3>
+                        <div class="package-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="package-content">
+                        <ul>
+                            <li data-de="Prozessaufnahme und Systemanalyse" data-en="Process documentation and system analysis">Prozessaufnahme und Systemanalyse</li>
+                            <li data-de="Technische Bewertung und Regelkonformitätsprüfung" data-en="Technical assessment and compliance review">Technische Bewertung und Regelkonformitätsprüfung</li>
+                            <li data-de="Einsparpotenziale identifizieren" data-en="Identify cost-saving potential">Einsparpotenziale identifizieren</li>
+                            <li data-de="Umsetzungsempfehlungen mit Wirtschaftlichkeitsanalyse" data-en="Implementation recommendations with ROI">Umsetzungsempfehlungen mit Wirtschaftlichkeitsanalyse</li>
+                        </ul>
+                        <div class="package-duration" data-de="Typische Dauer: 1-3 Wochen" data-en="Typical duration: 1-3 weeks">Typische Dauer: 1-3 Wochen</div>
+                    </div>
+                </div>
+
+                <div class="package-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="package-header">
+                        <h3 data-de="Projektstabilisierung (Krisenunterstützung)" data-en="Project Stabilization (Crisis Support)">Projektstabilisierung (Krisenunterstützung)</h3>
+                        <div class="package-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                    </div>
+                    <div class="package-content">
+                        <ul>
+                            <li data-de="Notfallsituationen bewältigen" data-en="Managing firefighting situations">Notfallsituationen bewältigen</li>
+                            <li data-de="Stabilisierung kritischer Prozesse" data-en="Stabilizing critical processes">Stabilisierung kritischer Prozesse</li>
+                            <li data-de="Schnittstellenkoordination" data-en="Interface coordination">Schnittstellenkoordination</li>
+                            <li data-de="Erfahrungen dokumentieren (Lessons Learned)" data-en="Document lessons learned">Erfahrungen dokumentieren (Lessons Learned)</li>
+                        </ul>
+                        <div class="package-duration" data-de="Flexible Laufzeit je nach Bedarf" data-en="Flexible duration as needed">Flexible Laufzeit je nach Bedarf</div>
+                    </div>
+                </div>
+
+                <div class="package-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="package-header">
+                        <h3 data-de="Retainer-Service" data-en="Retainer Service">Retainer-Service</h3>
+                        <div class="package-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                    </div>
+                    <div class="package-content">
+                        <ul>
+                            <li data-de="Kontinuierliche Verfügbarkeit" data-en="Continuous availability">Kontinuierliche Verfügbarkeit</li>
+                            <li data-de="Monatliche Beratungstage" data-en="Monthly consulting days">Monatliche Beratungstage</li>
+                            <li data-de="Projektbegleitung und Monitoring" data-en="Project support and monitoring">Projektbegleitung und Monitoring</li>
+                            <li data-de="Prioritäre Terminvergabe" data-en="Priority appointment scheduling">Prioritäre Terminvergabe</li>
+                        </ul>
+                        <div class="package-duration" data-de="1-2 Tage/Monat, langfristig" data-en="1-2 days/month, long-term">1-2 Tage/Monat, langfristig</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose" class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-de="Warum SupportedProject?" data-en="Why SupportedProject?">Warum SupportedProject?</h2>
+                <p data-de="Ihre Vorteile auf einen Blick" data-en="Your advantages at a glance">Ihre Vorteile auf einen Blick</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="advantage-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 data-de="Schnelle Startfähigkeit" data-en="Quick Start Capability">Schnelle Startfähigkeit</h3>
+                    <p data-de="Dank schlanker Struktur und bewährten Prozessen können wir innerhalb von Tagen starten - nicht Wochen." data-en="Thanks to lean structure and proven processes, we can start within days - not weeks.">
+                        Dank schlanker Struktur und bewährten Prozessen können wir innerhalb von Tagen starten - nicht Wochen.
+                    </p>
+                </div>
+                
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-de="Messbare Ergebnisse" data-en="Measurable Results">Messbare Ergebnisse</h3>
+                    <p data-de="Klare Kennzahlen und Meilensteine sorgen für Transparenz und nachweisbare Verbesserungen in Ihren Projekten." data-en="Clear KPIs and milestones ensure transparency and demonstrable improvements in your projects.">
+                        Klare Kennzahlen und Meilensteine sorgen für Transparenz und nachweisbare Verbesserungen in Ihren Projekten.
+                    </p>
+                </div>
+                
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-de="Professionelle Absicherung" data-en="Professional Coverage">Professionelle Absicherung</h3>
+                    <p data-de="Berufshaftpflicht (3 Mio. €), sauberes Vertragswerk und DSGVO-konforme Prozesse für Ihre Sicherheit." data-en="Professional liability insurance (3 million €), clean contracts and GDPR-compliant processes for your security.">
+                        Berufshaftpflicht (3 Mio. €), sauberes Vertragswerk und DSGVO-konforme Prozesse für Ihre Sicherheit.
+                    </p>
+                </div>
+                
+                <div class="advantage-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="advantage-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 data-de="Starkes Netzwerk" data-en="Strong Network">Starkes Netzwerk</h3>
+                    <p data-de="Zugang zu spezialisierten Partnern und etablierten Lieferantennetzwerken (Prüflabore, IT, IoT, Industrie) - ein Ansprechpartner für Ihre komplexen Anforderungen." data-en="Access to specialized partners and established supplier networks (testing labs, IT, IoT, industry) - one contact for your complex requirements.">
+                        Zugang zu spezialisierten Partnern und etablierten Lieferantennetzwerken (Prüflabore, IT, IoT, Industrie) - ein Ansprechpartner für Ihre komplexen Anforderungen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Groups Section -->
+    <section id="target-groups" class="target-groups">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-de="Zielgruppen" data-en="Target Groups">Zielgruppen</h2>
+                <p data-de="Von Startups bis Industriekonzern - maßgeschneiderte Lösungen für jede Unternehmensgröße" data-en="From startups to industrial corporations - tailored solutions for every company size">Von Startups bis Industriekonzern - maßgeschneiderte Lösungen für jede Unternehmensgröße</p>
+            </div>
+            <div class="target-groups-grid">
+                <div class="target-group" data-aos="slide-up">
+                    <div class="target-image">
+                        <img src="images/climbing.jpg" alt="Bergsteiger bei der Herausforderung - Symbolbild für Startup-Wachstum und Zielerreichung">
+                    </div>
+                    <div class="target-content">
+                        <h3 data-de="Startups (5-50 Mitarbeiter)" data-en="Startups (5-50 Employees)">Startups (5-50 Mitarbeiter)</h3>
+                        <ul>
+                            <li data-de="Begleitung bei der Wahl der passenden Gesellschaftsform in Abstimmung mit Steuer-/Rechtsberatung" data-en="Support in choosing suitable corporate structure in coordination with tax/legal advisors">Begleitung bei der Wahl der passenden Gesellschaftsform in Abstimmung mit Steuer-/Rechtsberatung</li>
+                            <li data-de="Struktur und Prozesse von Grund auf etablieren" data-en="Establish structure and processes from scratch">Struktur und Prozesse von Grund auf etablieren</li>
+                            <li data-de="Unterstützung bei Finanzierung & Fördermittel-Recherche" data-en="Support for financing & funding research">Unterstützung bei Finanzierung & Fördermittel-Recherche</li>
+                            <li data-de="Investor-Ready-Dokumentation erstellen" data-en="Create investor-ready documentation"><strong>Investor-Ready-Dokumentation</strong> erstellen</li>
+                            <li data-de="Qualitätsmanagement und Zertifizierungsvorbereitung" data-en="Quality management and certification preparation">Qualitätsmanagement und Zertifizierungsvorbereitung</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="target-group" data-aos="slide-up" data-aos-delay="100">
+                    <div class="target-image">
+                        <img src="images/teamwork.jpg" alt="Professionelles Team bei der Zusammenarbeit - Symbolbild für KMU-Projektmanagement">
+                    </div>
+                    <div class="target-content">
+                        <h3 data-de="KMU (50-500 Mitarbeiter)" data-en="SMEs (50-500 Employees)">KMU (50-500 Mitarbeiter)</h3>
+                        <ul>
+                            <li data-de="Bestehende Prozesse optimieren und digitalisieren" data-en="Optimize and digitize existing processes">Bestehende Prozesse optimieren und digitalisieren</li>
+                            <li data-de="Temporäre Kapazitätslücken überbrücken" data-en="Bridge temporary capacity gaps">Temporäre Kapazitätslücken überbrücken</li>
+                            <li data-de="Projektspitzen professionell abfedern" data-en="Handle project peaks professionally">Projektspitzen professionell abfedern</li>
+                            <li data-de="Neue Märkte und Technologien erschließen" data-en="Develop new markets and technologies">Neue Märkte und Technologien erschließen</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="target-group" data-aos="slide-up" data-aos-delay="200">
+                    <div class="target-image">
+                        <img src="images/handshake.jpg" alt="Geschäftshandschlag zwischen Industriepartnern - Symbol für erfolgreiche Kooperationen">
+                    </div>
+                    <div class="target-content">
+                        <h3 data-de="Industrieunternehmen" data-en="Industrial Companies">Industrieunternehmen</h3>
+                        <ul>
+                            <li data-de="Kritische Anlaufphasen und Produkteinführungen" data-en="Critical startup phases and product launches">Kritische Anlaufphasen und Produkteinführungen</li>
+                            <li data-de="Krisenbewältigung und Notfallmanagement" data-en="Turnaround situations and firefighting">Krisenbewältigung und Notfallmanagement</li>
+                            <li data-de="Verifikation & Validierung komplexer Systeme" data-en="Verification & validation of complex systems">Verifikation & Validierung komplexer Systeme</li>
+                            <li data-de="Lieferantennetzwerk und Beschaffungsmanagement" data-en="Supplier network and supply chain management">Lieferantennetzwerk und Beschaffungsmanagement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-de="Lassen Sie uns sprechen" data-en="Let's Talk">Lassen Sie uns sprechen</h2>
+                <p data-de="Kostenloses Erstberatungsgespräch oder direkte Kontaktaufnahme - Sie haben die Wahl" data-en="Free initial consultation or direct contact - your choice">Kostenloses Erstberatungsgespräch oder direkte Kontaktaufnahme - Sie haben die Wahl</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Andrej Sartison</h3>
+                        <p data-de="SupportedProject Inhaber" data-en="SupportedProject Owner">SupportedProject Inhaber</p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-de="E-Mail" data-en="Email">E-Mail</h4>
+                                <a href="mailto:kontakt@supportedproject.de">kontakt@supportedproject.de</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-de="Telefon" data-en="Phone">Telefon</h4>
+                                <a href="tel:+491704880284">+49 170 488 0284</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="#" target="_blank">Andrej Sartison</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <div class="contact-options">
+                        <div class="contact-option primary">
+                            <div class="option-icon">
+                                <i class="fas fa-calendar-plus"></i>
+                            </div>
+                            <h4 data-de="Empfohlen: Online-Terminbuchung" data-en="Recommended: Online Appointment Booking">Empfohlen: Online-Terminbuchung</h4>
+                            <p data-de="Buchen Sie Ihr 30-minütiges Erstgespräch - schnell, einfach und unverbindlich." data-en="Book your 30-minute initial consultation - fast, easy and without obligation.">
+                                Buchen Sie Ihr 30-minütiges Erstgespräch - schnell, einfach und unverbindlich.
+                            </p>
+                            <button class="btn btn-primary btn-lg" data-booking-trigger style="width: 100%; margin-top: 1rem;" data-de="Termin online buchen" data-en="Book Appointment Online">
+                                <i class="fas fa-calendar-check"></i>
+                                Termin online buchen
+                            </button>
+                            <p class="booking-privacy-note" style="font-size: 0.8rem; color: #666; margin-top: 0.5rem; text-align: center;">
+                                <span data-de="Terminbuchung über Microsoft Booking. Details in der" data-en="Appointment booking via Microsoft Booking. Details in">Terminbuchung über Microsoft Booking. Details in der</span>
+                                <a href="datenschutz.html" target="_blank" data-de="Datenschutzerklärung" data-en="privacy policy">Datenschutzerklärung</a>.
+                            </p>
+                        </div>
+                        
+                        <div class="contact-option-divider">
+                            <span data-de="oder" data-en="or">oder</span>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <h3 data-de="Nachricht senden" data-en="Send Message">Nachricht senden</h3>
+                        
+                        <div class="form-group">
+                            <label for="name" data-de="Name *" data-en="Name *">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-de="E-Mail *" data-en="Email *">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" data-de="Unternehmen" data-en="Company">Unternehmen</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-de="Betreff *" data-en="Subject *">Betreff *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" data-de="Bitte wählen..." data-en="Please select...">Bitte wählen...</option>
+                                <option value="kickstart" data-de="Kickstart-Paket" data-en="Kickstart Package">Kickstart-Paket</option>
+                                <option value="audit" data-de="Audit & Bewertung" data-en="Audit & Assessment">Audit & Bewertung</option>
+                                <option value="turnaround" data-de="Projektstabilisierung" data-en="Project Stabilization">Projektstabilisierung</option>
+                                <option value="retainer" data-de="Retainer-Service" data-en="Retainer Service">Retainer-Service</option>
+                                <option value="interim" data-de="Interimsmanagement" data-en="Interim Management">Interimsmanagement</option>
+                                <option value="other" data-de="Sonstiges" data-en="Other">Sonstiges</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-de="Nachricht *" data-en="Message *">Nachricht *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy" data-de="Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzerklärung zu. *" data-en="I agree to the processing of my data according to the privacy policy. *">
+                                Ich stimme der Verarbeitung meiner Daten gemäß <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> zu. *
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" data-de="Nachricht senden" data-en="Send Message">
+                                <i class="fas fa-paper-plane"></i>
+                                Nachricht senden
+                            </button>
+                            <button type="button" class="btn btn-secondary" data-booking-trigger data-de="Oder Termin buchen" data-en="Or Book Appointment">
+                                <i class="fas fa-calendar-plus"></i>
+                                Oder Termin buchen
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="SupportedProject Logo">
+                        <p data-de="Technische Projektdienstleistungen & Interimsmanagement" data-en="Technical Project Services & Interim Management">Technische Projektdienstleistungen & Interimsmanagement</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-de="Leistungen" data-en="Services">Leistungen</h4>
+                    <ul>
+                        <li><a href="#services" data-de="Analyse & Konzeption" data-en="Analysis & Conception">Analyse & Konzeption</a></li>
+                        <li><a href="#services" data-de="Projektmanagement" data-en="Project Management">Projektmanagement</a></li>
+                        <li><a href="#services" data-de="Interimsmanagement" data-en="Interim Management">Interimsmanagement</a></li>
+                        <li><a href="#services" data-de="Lieferantenkoordination" data-en="Supplier Coordination">Lieferantenkoordination</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-de="Projektpakete" data-en="Project Packages">Projektpakete</h4>
+                    <ul>
+                        <li><a href="#projects" data-de="Kickstart-Paket" data-en="Kickstart Package">Kickstart-Paket</a></li>
+                        <li><a href="#projects" data-de="Audit & Bewertung" data-en="Audit & Assessment">Audit & Bewertung</a></li>
+                        <li><a href="#projects" data-de="Projektstabilisierung" data-en="Project Stabilization">Projektstabilisierung</a></li>
+                        <li><a href="#projects" data-de="Retainer-Service" data-en="Retainer Service">Retainer-Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +49 (0) 170 488 0284</li>
+                        <li><i class="fas fa-envelope"></i> kontakt@supportedproject.de</li>
+                        <li><i class="fas fa-globe"></i> www.supportedproject.de</li>
+                        <li><i class="fab fa-linkedin"></i> <a href="#" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="impressum.html" data-de="Impressum" data-en="Legal Notice">Impressum</a>
+                    <a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a>
+                    <a href="agb.html" data-de="AGB" data-en="Terms of Service">AGB</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 SupportedProject - Andrej Sartison. <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/cookie-consent.js"></script>
+</body>
+</html>
