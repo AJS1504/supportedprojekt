@@ -1384,12 +1384,20 @@ a {
         right: 20px;
     }
     
+    .nav-logo .logo-img {
+        height: 60px;
+    }
+    
+    .navbar.scrolled .logo-img {
+        height: 50px;
+    }
+    
     .navbar {
-        padding: 25px 0;
+        padding: 35px 0;
     }
     
     .navbar.scrolled {
-        padding: 20px 0;
+        padding: 30px 0;
     }
     
     .hero-title {
@@ -1406,7 +1414,7 @@ a {
     }
     
     .hero {
-        padding-top: 140px;
+        padding-top: 160px;
     }
     
     .hero-content {
