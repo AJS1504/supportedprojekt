@@ -49,10 +49,13 @@ class CookieConsent {
 
         // Consent prüfen und Banner anzeigen wenn nötig
         if (!this.consentData.hasConsent) {
-            // Verzögerung um Logo-Animation nicht zu stören
+            // Verzögerung: Desktop nach Hero-Animation, Mobile sofort
+            const isMobile = window.innerWidth <= 768;
+            const delay = isMobile ? 1000 : 5500; // Mobile: 1s, Desktop: 5.5s
+            
             setTimeout(() => {
                 this.showBanner();
-            }, 4500); // Nach Logo-Animation (4s) + 0.5s Puffer
+            }, delay);
         } else if (this.consentData.analytics) {
             this.enableAnalytics();
         }
@@ -210,16 +213,38 @@ class CookieConsent {
         modal.style.opacity = '0';
         setTimeout(() => modal.remove(), 300);
     }
-
-    enableAnalytics() {
-        // Google Analytics 4 Code hier einfügen wenn GA4 implementiert wird
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted'
-            });
+    
+    showSettings() {
+        // Entferne existierende Modals
+        const existingModal = document.querySelector('.cookie-modal');
+        if (existingModal) {
+            existingModal.remove();
         }
         
-        console.log('Analytics enabled');
+        // Zeige das Settings Modal
+        const modal = this.createSettingsModal();
+        document.body.appendChild(modal);
+        
+        setTimeout(() => {
+            modal.style.opacity = '1';
+        }, 10);
+        
+        this.bindModalEvents(modal);
+    }
+
+    enableAnalytics() {
+        // Google Consent Mode v2 über dataLayer (GTM)
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'denied',  // Werbung erstmal denied
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
+        
+        console.log('Analytics enabled via GTM Consent Mode v2');
     }
 
     addEventListeners() {
@@ -360,6 +385,47 @@ const cookieStyles = `
     color: #333;
 }
 
+/* Schwebender Cookie-Settings Button */
+.cookie-settings-floating {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    background: #2563eb !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+    cursor: pointer !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    opacity: 0.5 !important;
+    transition: all 0.3s ease !important;
+}
+
+.cookie-settings-floating:hover {
+    opacity: 1;
+    transform: scale(1.3);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.cookie-settings-floating:active {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .cookie-settings-floating {
+        bottom: 80px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     .cookie-banner-content {
         flex-direction: column;
@@ -390,7 +456,27 @@ document.head.insertAdjacentHTML('beforeend', cookieStyles);
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         window.cookieConsent = new CookieConsent();
+        
+        // Cookie Settings Button Event Listener (Button ist bereits im HTML)
+        const settingsBtn = document.getElementById('cookie-settings-btn');
+        if (settingsBtn) {
+            settingsBtn.addEventListener('click', () => {
+                if (window.cookieConsent) {
+                    window.cookieConsent.showSettings();
+                }
+            });
+        }
     });
 } else {
     window.cookieConsent = new CookieConsent();
+    
+    // Cookie Settings Button Event Listener (Button ist bereits im HTML)
+    const settingsBtn = document.getElementById('cookie-settings-btn');
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', () => {
+            if (window.cookieConsent) {
+                window.cookieConsent.showSettings();
+            }
+        });
+    }
 }

@@ -339,12 +339,39 @@ class ContactFormManager {
         });
     }
     
-    handleSubmit(e) {
+    async handleSubmit(e) {
         e.preventDefault();
         
-        if (this.validateForm()) {
-            this.showSuccessMessage();
-            this.form.reset();
+        if (!this.validateForm()) {
+            return;
+        }
+        
+        // Show loading state
+        const submitBtn = this.form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Wird gesendet...';
+        
+        try {
+            const response = await fetch(this.form.action, {
+                method: 'POST',
+                body: new FormData(this.form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                this.showSuccessMessage();
+                this.form.reset();
+            } else {
+                this.showErrorMessage();
+            }
+        } catch (error) {
+            this.showErrorMessage();
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
         }
     }
     
@@ -433,6 +460,37 @@ class ContactFormManager {
             ">
                 <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
                 Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
+            </div>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Remove notification after 5 seconds
+        setTimeout(() => {
+            notification.style.animation = 'slideOutRight 0.3s ease-in forwards';
+            setTimeout(() => notification.remove(), 300);
+        }, 5000);
+    }
+    
+    showErrorMessage() {
+        // Create and show error notification
+        const notification = document.createElement('div');
+        notification.className = 'error-notification';
+        notification.innerHTML = `
+            <div style="
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #dc2626;
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                z-index: 10000;
+                animation: slideInRight 0.3s ease-out;
+            ">
+                <i class="fas fa-exclamation-circle" style="margin-right: 0.5rem;"></i>
+                Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut.
             </div>
         `;
         
