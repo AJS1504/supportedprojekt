@@ -47,31 +47,17 @@ class CookieConsent {
             this.currentLanguage = activeLangBtn.id === 'lang-en' ? 'en' : 'de';
         }
 
-        // Debug: Cookie-Status loggen
-        console.log('🍪 Cookie Consent Status:', {
-            hasConsent: this.consentData.hasConsent,
-            analytics: this.consentData.analytics,
-            cookieName: this.cookieName,
-            rawCookie: this.getCookie(this.cookieName)
-        });
-
         // Consent prüfen und Banner anzeigen wenn nötig
         if (!this.consentData.hasConsent) {
             // Verzögerung: Desktop nach Hero-Animation, Mobile sofort
             const isMobile = window.innerWidth <= 768;
             const delay = isMobile ? 1000 : 5500; // Mobile: 1s, Desktop: 5.5s
             
-            console.log('📢 Cookie-Banner wird in ' + delay + 'ms angezeigt (isMobile: ' + isMobile + ')');
-            
             setTimeout(() => {
-                console.log('🎬 showBanner() wird aufgerufen');
                 this.showBanner();
             }, delay);
-        } else {
-            console.log('✅ Consent bereits erteilt - Banner wird NICHT angezeigt');
-            if (this.consentData.analytics) {
-                this.enableAnalytics();
-            }
+        } else if (this.consentData.analytics) {
+            this.enableAnalytics();
         }
 
         this.addEventListeners();
@@ -95,17 +81,13 @@ class CookieConsent {
     }
 
     showBanner() {
-        console.log('🎨 createBanner() wird aufgerufen');
         const banner = this.createBanner();
-        console.log('✅ Banner erstellt:', banner);
         document.body.appendChild(banner);
-        console.log('✅ Banner an document.body angehängt');
         
         // Animation
         setTimeout(() => {
             banner.style.transform = 'translateY(0)';
             banner.style.opacity = '1';
-            console.log('✅ Banner-Animation gestartet (transform: translateY(0), opacity: 1)');
         }, 100);
     }
 
@@ -434,31 +416,49 @@ const cookieStyles = `
 // Styles einfügen
 document.head.insertAdjacentHTML('beforeend', cookieStyles);
 
-// FINALE COOKIE-BUTTON-LÖSUNG: Event Delegation auf Document
-document.addEventListener('click', function(e) {
-    // Prüfe ob das geklickte Element oder ein Parent das Cookie-Button ist
-    const btn = e.target.closest('#cookie-settings-btn');
-    if (btn) {
-        console.log('🔵 Cookie Settings Button geklickt via Delegation!');
-        e.preventDefault();
-        e.stopPropagation();
-        
-        if (window.cookieConsent) {
-            console.log('✅ Rufe showSettings() auf');
-            window.cookieConsent.showSettings();
-        } else {
-            console.error('❌ window.cookieConsent nicht verfügbar!');
-        }
-    }
-}, true); // useCapture für frühes Abfangen
-
-// Cookie Consent initialisieren
+// Cookie Consent initialisieren wenn DOM ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         window.cookieConsent = new CookieConsent();
-        console.log('✅ CookieConsent initialisiert (DOMContentLoaded)');
+        
+        // Cookie Settings Button Event Listener (Button ist bereits im HTML)
+        const settingsBtn = document.getElementById('cookie-settings-btn');
+        if (settingsBtn) {
+            console.log('✅ Cookie Settings Button gefunden:', settingsBtn);
+            settingsBtn.addEventListener('click', (e) => {
+                console.log('🔵 Button geklickt!', e);
+                e.preventDefault();
+                e.stopPropagation();
+                if (window.cookieConsent) {
+                    console.log('✅ cookieConsent existiert, rufe showSettings() auf');
+                    window.cookieConsent.showSettings();
+                } else {
+                    console.error('❌ window.cookieConsent nicht gefunden!');
+                }
+            });
+        } else {
+            console.error('❌ Cookie Settings Button NICHT gefunden!');
+        }
     });
 } else {
     window.cookieConsent = new CookieConsent();
-    console.log('✅ CookieConsent initialisiert (sofort)');
+    
+    // Cookie Settings Button Event Listener (Button ist bereits im HTML)
+    const settingsBtn = document.getElementById('cookie-settings-btn');
+    if (settingsBtn) {
+        console.log('✅ Cookie Settings Button gefunden:', settingsBtn);
+        settingsBtn.addEventListener('click', (e) => {
+            console.log('🔵 Button geklickt!', e);
+            e.preventDefault();
+            e.stopPropagation();
+            if (window.cookieConsent) {
+                console.log('✅ cookieConsent existiert, rufe showSettings() auf');
+                window.cookieConsent.showSettings();
+            } else {
+                console.error('❌ window.cookieConsent nicht gefunden!');
+            }
+        });
+    } else {
+        console.error('❌ Cookie Settings Button NICHT gefunden!');
+    }
 }
