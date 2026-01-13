@@ -434,31 +434,43 @@ const cookieStyles = `
 // Styles einfügen
 document.head.insertAdjacentHTML('beforeend', cookieStyles);
 
-// FINALE COOKIE-BUTTON-LÖSUNG: Event Delegation auf Document
-document.addEventListener('click', function(e) {
-    // Prüfe ob das geklickte Element oder ein Parent das Cookie-Button ist
-    const btn = e.target.closest('#cookie-settings-btn');
-    if (btn) {
-        console.log('🔵 Cookie Settings Button geklickt via Delegation!');
-        e.preventDefault();
-        e.stopPropagation();
+// Cookie Settings Button registrieren (Funktion)
+function registerCookieButton() {
+    const settingsBtn = document.getElementById('cookie-settings-btn');
+    if (settingsBtn) {
+        console.log('✅ Cookie Settings Button gefunden:', settingsBtn);
         
-        if (window.cookieConsent) {
-            console.log('✅ Rufe showSettings() auf');
-            window.cookieConsent.showSettings();
-        } else {
-            console.error('❌ window.cookieConsent nicht verfügbar!');
-        }
+        // Alle Events entfernen
+        const newBtn = settingsBtn.cloneNode(true);
+        settingsBtn.parentNode.replaceChild(newBtn, settingsBtn);
+        
+        // Click-Event registrieren
+        newBtn.addEventListener('click', (e) => {
+            console.log('🔵 Button geklickt!', e);
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (window.cookieConsent) {
+                console.log('✅ cookieConsent existiert, rufe showSettings() auf');
+                window.cookieConsent.showSettings();
+            } else {
+                console.error('❌ window.cookieConsent nicht gefunden!');
+            }
+        }, true); // useCapture = true
+        
+        console.log('✅ Event Listener registriert');
+    } else {
+        console.error('❌ Cookie Settings Button NICHT gefunden!');
     }
-}, true); // useCapture für frühes Abfangen
+}
 
-// Cookie Consent initialisieren
+// Cookie Consent initialisieren wenn DOM ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         window.cookieConsent = new CookieConsent();
-        console.log('✅ CookieConsent initialisiert (DOMContentLoaded)');
+        registerCookieButton();
     });
 } else {
     window.cookieConsent = new CookieConsent();
-    console.log('✅ CookieConsent initialisiert (sofort)');
+    registerCookieButton();
 }
