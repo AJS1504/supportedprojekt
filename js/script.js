@@ -442,6 +442,12 @@ class ContactFormManager {
     }
     
     showSuccessMessage() {
+        // Get current language
+        const currentLang = localStorage.getItem('language') || 'de';
+        const message = currentLang === 'de' 
+            ? 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.'
+            : 'Thank you! Your message has been sent successfully.';
+        
         // Create and show success notification
         const notification = document.createElement('div');
         notification.className = 'success-notification';
@@ -459,7 +465,7 @@ class ContactFormManager {
                 animation: slideInRight 0.3s ease-out;
             ">
                 <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
-                Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
+                ${message}
             </div>
         `;
         
@@ -473,6 +479,12 @@ class ContactFormManager {
     }
     
     showErrorMessage() {
+        // Get current language
+        const currentLang = localStorage.getItem('language') || 'de';
+        const message = currentLang === 'de' 
+            ? 'Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut.'
+            : 'There was an error sending. Please try again.';
+        
         // Create and show error notification
         const notification = document.createElement('div');
         notification.className = 'error-notification';
@@ -490,7 +502,7 @@ class ContactFormManager {
                 animation: slideInRight 0.3s ease-out;
             ">
                 <i class="fas fa-exclamation-circle" style="margin-right: 0.5rem;"></i>
-                Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut.
+                ${message}
             </div>
         `;
         
